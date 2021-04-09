@@ -6,6 +6,7 @@
 /*    Description:  Contains all odometry algorithm definitions               */
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
+
 #include "vex.h"
 #include "chassis.h"
 #include "odometry.h"
@@ -13,6 +14,9 @@
 using namespace OdomLib;
 
 /*----------------------------------------------------------------------------*/
+
+	// Universal Chassis Object
+Chassis chassis = compBot;
 
   // Angle and Point Definition
 float x = 0, y = 0, heading = 0, relativeHeading = 0;
@@ -24,6 +28,7 @@ float prevLeft = 0.0, prevRight = 0.0, prevBack = 0.0, currentLeft = 0.0, curren
 bool OdomLib::enable_odom = false;
 
 /*----------------------------------------------------------------------------*/
+#pragma region test
 
 	// Minimum turn velocity
 float minTurnVel = 1;
@@ -48,5 +53,6 @@ float kD_drive = 0;
 
 	// Acceptable margin of error for drive PD system
 float MoE_drive = 0.1;
-
+#pragma endregion
 /*----------------------------------------------------------------------------*/
+
