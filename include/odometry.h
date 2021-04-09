@@ -38,4 +38,7 @@ namespace OdomLib {
   
 }
 
+void funcTest();
+void turnDrive();
+
 #endif
